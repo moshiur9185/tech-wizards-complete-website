@@ -30,7 +30,7 @@ const MakeAdmin = () => {
     return (
         <section className="container-fluid row">
         <Sidebar></Sidebar>
-        <div className="col-md-5 p-4 pr-5" style={{ position: "absolute", left: 250, backgroundColor: "#F4FDFB" }}>
+        <div className="col-md-5 p-4 pr-5" style={{ position: "absolute", left: 320, backgroundColor: "#F4FDFB" }}>
             <h5 className="text-brand">Make Admin</h5>
             <form onSubmit={handleMakeAdmin}>
                 <div className="form-group">
