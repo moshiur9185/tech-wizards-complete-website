@@ -1,0 +1,21 @@
+.footer-area{
+    background-image: linear-gradient(rgba(170, 244, 247, 0.411), rgba(118, 241, 190, 0.199));
+    background-size: cover;
+}
+
+.footer-area li{
+    padding-bottom: 10px;
+}
+
+.social-media .icon{
+    height: 40px;
+    width: 40px;
+    color: #c71c4f;
+    border-radius: 50%;
+    border: 1px solid #067aff;
+    padding: 10px;
+}
+.social-media .active-icon{
+    background-color: #0776f5 ;
+    color:white;
+}

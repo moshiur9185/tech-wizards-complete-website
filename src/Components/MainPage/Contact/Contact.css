@@ -1,0 +1,16 @@
+.contact{
+    background-image: url(../../../Image_Icon/Image/CareService.jpg);
+    position: relative;
+    background-size: cover;
+    z-index: 1;
+}
+.contact::before{
+    position: absolute;
+    content: "";
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(12, 11, 27);
+    opacity: .8;
+    z-index: -1;
+}

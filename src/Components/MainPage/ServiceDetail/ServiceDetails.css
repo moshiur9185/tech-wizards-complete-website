@@ -1,0 +1,11 @@
+.card-service{
+    height: 100%;
+}
+.card-service:hover{
+    color:white !important;
+    /* width: 360px; */
+    background-color: rgba(22, 216, 109, 0.76);
+    box-shadow: 5px 5px 8px rgb(160, 160, 160);
+    animation-name: example;
+    animation-duration: 4s;
+}
