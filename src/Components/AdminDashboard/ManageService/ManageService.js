@@ -22,7 +22,7 @@ const ManageService = () => {
     return (
         <div>
             <Sidebar/>
-            <div style={{position: 'absolute', right:"0"}} className="d-flex flex-column justify-content-center col-md-10">
+            <div style={{position: 'absolute', right:"10"}} className="d-flex flex-column justify-content-center col-md-10">
                 <h1 className="text-center text-success">Manage Product</h1>
 
                 <Container>

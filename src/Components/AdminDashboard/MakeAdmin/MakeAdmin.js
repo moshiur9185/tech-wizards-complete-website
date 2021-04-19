@@ -30,13 +30,13 @@ const MakeAdmin = () => {
     return (
         <section className="container-fluid row">
         <Sidebar></Sidebar>
-        <div className="col-md-5 p-4 pr-5" style={{ position: "absolute", left: 320, backgroundColor: "#F4FDFB" }}>
+        <div className="col-md-5 p-4 pr-5" style={{ position: "absolute", left: 280, backgroundColor: "#F4FDFB" }}>
             <h5 className="text-brand">Make Admin</h5>
             <form onSubmit={handleMakeAdmin}>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email :</label>
                     <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="*@gmail.com" />
-                    <button type="submit" className="btn btn-brand ">Submit</button>
+                    <button type="submit" className="btn btn-secondary mt-3">Submit</button>
                 </div>
              </form>
         </div>

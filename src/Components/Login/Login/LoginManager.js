@@ -2,11 +2,10 @@ import  firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import jwt_decode from 'jwt-decode';
-import "firebase/auth"
 
 // export const initializeLoginFramework = () => {
 //   if(firebase.apps.length === 0) {
-      
+//       firebase.initializeApp(firebaseConfig);
 //   }
 // }
 const app = firebase.initializeApp(firebaseConfig);
@@ -26,6 +25,22 @@ export const handleGoogleSignIn = () => {
       console.log(errorMessage);
     });
 };
+
+// Facebook Sign In handler
+export const handleFbSignIn = () => {
+  const fbProvider = new firebase.auth.FacebookAuthProvider();
+    return firebase.auth().signInWithPopup(fbProvider)
+    .then(function (res) {
+      const { displayName, email } = res.user;
+      const signedInUser = { name: displayName, email: email };
+      return signedInUser;
+       })
+    .catch(function (error) {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    });
+};
+
 
 // Sign Out handler:
 export const handleSignOut = () => {

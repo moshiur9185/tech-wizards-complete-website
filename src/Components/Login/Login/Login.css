@@ -37,11 +37,19 @@
   margin-right: 2px;
 }
 .social-login .google {
-  border: 2px solid rgb(253, 0, 42);
+  border: 2px solid rgb(219, 9, 72);
 }
 .social-login .google:hover {
-  background-color: rgba(34, 250, 52, 0.548);
-  color: blue;
+  background-color: rgb(233, 22, 121);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.social-login .facebook {
+  border: 2px solid rgb(0, 160, 253);
+}
+.social-login .facebook:hover {
+  background-color: rgba(5, 155, 155);
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 .login-form .social-login .btn {

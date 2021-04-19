@@ -1,17 +1,20 @@
 import React, { useState, useContext } from 'react';
 import './Login.css';
 import { useHistory, useLocation } from 'react-router-dom';
-// import { UserContext } from '../../App';
+import { UserContext } from '../../../App';
 import { useForm } from 'react-hook-form';
+import 'firebase/auth';
+import   firebase from 'firebase/app';
+import fbIcon from './fb.png';
 import gIcon from './google.png';
 
 // Import from LoginManager
-import { handleGoogleSignIn,resetPassword, createUserWithEmailAndPassword, signInWithEmailAndPassword,} from './LoginManager';
-import { UserContext } from '../../../App';
+import {handleFbSignIn, handleGoogleSignIn,resetPassword, createUserWithEmailAndPassword, signInWithEmailAndPassword,} from './LoginManager';
+
 
 
 const Login = () => {
-  // Firebase init
+  // // Firebase init
   // initializeLoginFramework();
 
   //User Account
@@ -39,6 +42,11 @@ const [error, setError] = useState("")
   const googleSignIn = () => {
     handleGoogleSignIn().then((res) => handleResponse(res, true));
   };
+  // FB Sign In/Up
+  const fbSignIn = () => {
+    handleFbSignIn().then((res) => handleResponse(res, true));
+  };
+
  
   const handleResponse = (res, redirect) => { 
     if (res.error) {
@@ -47,23 +55,23 @@ const [error, setError] = useState("")
     } else {
         setUser(res);
         setLoggedInUser(res);
-        // storeAuthToken();
+        storeAuthToken();
         redirect && history.replace(from);
         newUser && setError("")
         !newUser && setError("")
     }
 }
 
-// const storeAuthToken = () => {
-//   firebase.auth() .currentUser.getIdToken(true)
-//     .then(res =>{
-//       sessionStorage.setItem('token', res);
-//       history.replace(from);
-//     })
-//     .catch((error)=> {
-//       console.log(error);
-//     });
-// };
+const storeAuthToken = () => {
+  firebase.auth().currentUser.getIdToken(true)
+    .then(res =>{
+      sessionStorage.setItem('token', res);
+      history.replace(from);
+    })
+    .catch((error)=> {
+      console.log(error);
+    });
+};
 
 
 
@@ -156,8 +164,8 @@ const [error, setError] = useState("")
                 <button className="btn btn-primary" style={{ width: '100%' }} variant='warning'  type='submit' >Login</button>
               </div>
 
-              <div className='form-group col' id='forgetForm' className='text-center mt-3'>
-                <span>Don't have an account?</span>{' '}
+              <div className='form-group col text-center mt-3' id='forgetForm' >
+                <span>Don't have an account?</span>
                 <span style={{ cursor: 'pointer', color: 'blue' }} onClick={() => SetNewUSer(true)} >Create new account</span>
               </div>
               </div>
@@ -167,6 +175,11 @@ const [error, setError] = useState("")
                 <button className ="btn btn-light google" onClick={googleSignIn}>
                   <img align="left" src={gIcon} alt='google icon' />{' '}
                   <span>Continue with Google</span>
+                </button>
+
+                <button className="btn btn-light facebook" onClick={fbSignIn}>
+                  <img align="left" src={fbIcon} alt='facebook icon' />{' '}
+                  <span>Continue with Facebook</span>
                 </button>
               </div>
             </form>
@@ -233,7 +246,7 @@ const [error, setError] = useState("")
                 </div>
               </div>
 
-              <div className="form-group text-center mt-2" id='forgetForm' className=''>
+              <div className="form-group col text-center mt-2" id='forgetForm' >
                 <span>Already have an account?</span>{' '}
                 <span style={{ cursor: 'pointer', color: 'blue' }} onClick={() => SetNewUSer(false)}>Login</span>
               </div>
@@ -245,7 +258,12 @@ const [error, setError] = useState("")
               <button className="btn btn-light google"  onClick={googleSignIn}>
                   <img align="left" src={gIcon} alt='google icon' />{' '}
                   <span>Continue with Google</span>
-                </button>               
+                </button>
+                <button className="btn btn-light facebook" onClick={fbSignIn}>
+                  <img align="left" src={fbIcon} alt='facebook icon' />{' '}
+                  <span>Continue with Facebook</span>
+                </button>
+               
               </div>
             </form>
           )}
