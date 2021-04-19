@@ -59,7 +59,7 @@ const Book = () => {
       <Sidebar></Sidebar>
       <div
         className="col-md-8 p-4 pr-5"
-        style={{ position: "absolute", left: 250, backgroundColor: "#F4FDFB" }}
+        style={{ position: "absolute", left: 320, backgroundColor: "#F4FDFB" }}
       >
         <h5 className="text-brand">Book</h5>
         <Container className="mt-5">

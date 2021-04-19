@@ -37,7 +37,7 @@ const Review = () => {
           className="col-md-5 p-4 pr-5"
           style={{
             position: "absolute",
-            left: 250,
+            left: 320,
             backgroundColor: "#F4FDFB",
           }}
         >

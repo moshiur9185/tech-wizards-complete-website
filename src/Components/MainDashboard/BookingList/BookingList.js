@@ -20,7 +20,7 @@ const BookingList = () => {
       <Sidebar></Sidebar>
       <div
         className="col-md-9 p-4 pr-5"
-        style={{ position: "absolute", left: 250, backgroundColor: "#F4FDFB" }}
+        style={{ position: "absolute", left: 320, backgroundColor: "#F4FDFB" }}
       >
         <h2>Service List</h2>
         <Container>
