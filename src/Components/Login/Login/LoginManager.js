@@ -2,10 +2,25 @@ import  firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import jwt_decode from 'jwt-decode';
+import "firebase/auth"
 
 const app = firebase.initializeApp(firebaseConfig);
 export const auth = app.auth()
 
+// Google Sign In Handler
+export const handleGoogleSignIn = () => {
+  const googleProvider = new firebase.auth.GoogleAuthProvider();
+    return firebase.auth().signInWithPopup(googleProvider)
+    .then( (res) =>{
+      const { displayName, email } = res.user;
+      const signedInUser = { name: displayName, email: email, success:true };
+      return signedInUser;
+    })
+    .catch(function (error) {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    });
+};
 
 // Sign Out handler:
 export const handleSignOut = () => {
@@ -22,6 +37,50 @@ export const handleSignOut = () => {
   }).catch(err => {
     const errorMessage = err.message;
     console.log(errorMessage);
+  });
+}
+// reset password
+export const resetPassword = (email) => {
+  let auth = firebase.auth();
+  auth
+    .sendPasswordResetEmail(email)
+    .then(
+          document.getElementById("resPass").innerText = "Reset password link has been sent to your email address"
+      )
+};
+// Create user with email and password
+export const createUserWithEmailAndPassword = (name, email, password) => {
+  return firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then( res => {
+    const newUserInfo = res.user;
+    newUserInfo.error = '';
+    newUserInfo.success = true;
+    updateUserName(name);
+    return newUserInfo;
+  })
+  .catch( error => {
+    const newUserInfo = {};
+    newUserInfo.error = error.message;
+    newUserInfo.success = false;
+    return newUserInfo;
+  });
+}
+
+
+// // sign in with email and password
+export const signInWithEmailAndPassword = (email, password) =>{
+  return firebase.auth().signInWithEmailAndPassword(email, password)
+  .then(res => {
+    const newUserInfo = res.user;
+    newUserInfo.error = '';
+    newUserInfo.success = true;
+    return newUserInfo;
+  })
+  .catch(function(error) {
+    const newUserInfo = {};
+    newUserInfo.error = error.message;
+    newUserInfo.success = false;
+    return newUserInfo;
   });
 }
 
