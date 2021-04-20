@@ -10,6 +10,7 @@ import {
   faClipboardList,
   faThLarge,
   faHome,
+  faEdit,
 } from "@fortawesome/free-solid-svg-icons";
 import { UserContext } from "../../../App";
 
@@ -61,6 +62,12 @@ const Sidebar = () => {
           <Link to="/addService" className="text-white">
             <FontAwesomeIcon icon={faPlus} />
             <span>Add Service</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/addBlog" className="text-white">
+            <FontAwesomeIcon icon={faEdit} />
+            <span>Add Blog</span>
           </Link>
         </li>
         <li>

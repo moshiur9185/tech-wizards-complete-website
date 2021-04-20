@@ -16,6 +16,7 @@ import { auth } from "./Components/Login/Login/LoginManager";
 import ManageService from "./Components/AdminDashboard/ManageService/ManageService";
 import Contact from "./Components/MainPage/Contact/Contact";
 import Services from "./Components/MainPage/Services/Services";
+import AddBlogs from "./Components/AdminDashboard/AddBlogs/AddBlogs";
 
 
 export const UserContext = createContext();
@@ -54,6 +55,9 @@ function App() {
           </Route>
           <Route path="/addService">
             <AddService />
+          </Route>
+          <Route path="/addBlog">
+            <AddBlogs/>
           </Route>
           <Route path="/services">
             <Services />

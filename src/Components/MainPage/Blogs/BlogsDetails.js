@@ -51,13 +51,12 @@ const BlogsDetails = ({ blog }) => {
         <CardHeader
           avatar={
             <Avatar aria-label="recipe" className={classes.avatar}>
-              {}
+              {(new Date()).getFullYear()}
             </Avatar>
           }
           title={blog.category}
-          subheader={blog.posted}
         />
-        <CardMedia className={classes.media} image={blog.img} />
+        <CardMedia className={classes.media} image={`data:image/png;base64,${blog.image.img}`} />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
             {blog.title}
@@ -83,8 +82,9 @@ const BlogsDetails = ({ blog }) => {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>Blog :</Typography>
-            <Typography paragraph>{blog.post}</Typography>
+            <Typography paragraph>Blogs :</Typography>
+            <Typography paragraph>{blog.description}</Typography>
+            <small className="text-secondary">posted by {blog.name}</small>
           </CardContent>
         </Collapse>
       </Card>

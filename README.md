@@ -13,7 +13,8 @@ Use this Project :
 8.Material Ui
 9.React spring
 10.Mobile version responsive
-11.Product Delete
+11.Service Delete
 12.Review update
 13.Admin Access
-14.gitignore etc.
+14.Blog add
+15.gitignore etc.
