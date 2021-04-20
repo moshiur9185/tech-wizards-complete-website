@@ -2,7 +2,6 @@ import  firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import jwt_decode from 'jwt-decode';
-import "firebase/auth"
 
 const app = firebase.initializeApp(firebaseConfig);
 export const auth = app.auth()

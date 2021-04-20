@@ -29,6 +29,7 @@ const OrderList = () => {
                 <th className="text-center">Service Name</th>
                 <th className="text-center">Service Price</th>
                 <th className="text-center">Order Date</th>
+                <th className="text-center">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -45,6 +46,18 @@ const OrderList = () => {
                         <td className="text-center">
                           {new Date(pd?.createDate).toLocaleString()}
                         </td>
+                        <td className="text-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Action
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">On Going</a></li>
+                                <li><a class="dropdown-item" href="#">Pending</a></li>
+                                <li><a class="dropdown-item" href="#">Done</a></li>
+                              </ul>
+                            </div>
+                            </td>
                       </tr>
                     );
                   });

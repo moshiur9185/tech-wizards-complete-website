@@ -8,6 +8,7 @@ import gIcon from './google.png';
 
 // Import from LoginManager
 import { handleGoogleSignIn,resetPassword, createUserWithEmailAndPassword, signInWithEmailAndPassword,} from './LoginManager';
+import HeaderNavbar from '../../Shared/HeaderNavbar/HeaderNavbar';
 
 
 const Login = () => {
@@ -95,6 +96,7 @@ const [error, setError] = useState("")
 
   return (
     <div>
+      <HeaderNavbar/>
     <div className='container d-flex justify-content-center mt-1'>
       <div className="row">
         <div className="col-md-12 mt-5">

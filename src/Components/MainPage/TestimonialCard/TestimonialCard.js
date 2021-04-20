@@ -4,7 +4,7 @@ import HoverRating from "./HoverRating";
 const TestimonialCard = ({ review }) => {
   return (
     <div className="col-md-4">
-      <div style={{ borderRadius: "50px", height:"50vh"}} className="card shadow my-4 bg-secondary">
+      <div style={{ borderRadius: "20px", height:"50vh", boxShadow: "5px 5px 10px grey"}} className="card my-4 bg-secondary">
         <div className="card-body py-3 px-4">
           <div className="d-flex p-2">
             <div className=" pl-2">

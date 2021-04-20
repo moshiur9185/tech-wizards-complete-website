@@ -40,8 +40,8 @@
     border: 2px solid rgb(253, 0, 97);
   }
   .social-login .google:hover {
-    background-color: rgb(39, 207, 104);
-    color: rgb(9, 169, 218);
+    background-color: rgb(224, 224, 224);
+    color: rgb(0, 110, 255);
     font-weight: bold;
   }
   .login-form .social-login .btn {
