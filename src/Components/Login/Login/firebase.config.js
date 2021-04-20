@@ -1,9 +1,9 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyA3ugUTIsze_J8ip29fREwey91NTXR35Zw",
-    authDomain: "vipdigitalshop-9185.firebaseapp.com",
-    projectId: "vipdigitalshop-9185",
-    storageBucket: "vipdigitalshop-9185.appspot.com",
-    messagingSenderId: "1048953981837",
-    appId: "1:1048953981837:web:56b4223af0c88ae4240bc4"
-  };
+  apiKey: "AIzaSyAOT8H3jM5airv1kkvW8RqNh_YrVjcohNo",
+  authDomain: "tech-wizards-fafbc.firebaseapp.com",
+  projectId: "tech-wizards-fafbc",
+  storageBucket: "tech-wizards-fafbc.appspot.com",
+  messagingSenderId: "147335833464",
+  appId: "1:147335833464:web:f10a474a4bdb2ca40f8a8d"
+};
 export default firebaseConfig;
