@@ -20,9 +20,9 @@ const ManageService = () => {
         .then(data => console.log(data))
     }
     return (
-        <section className="container-fluid row">
+        <section>
         <Sidebar></Sidebar>
-            <div className="d-flex flex-column justify-content-center col-md-9" style={{ position: "absolute", right: 50 }}>
+            <div className="container-fluid d-flex flex-column justify-content-center col-md-9" style={{ position: "absolute", right: 50 }}>
                 <h1 className="text-center text-success">Manage Product</h1>
                 <Container>
                     <Table className="table table-borderless bg-secondary text-white rounded">

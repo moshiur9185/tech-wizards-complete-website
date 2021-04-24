@@ -13,7 +13,7 @@ const OrderList = () => {
       });
   }, []);
   return (
-    <div className="">
+    <div>
       <Sidebar />
       <div
         style={{ position: "absolute", right: 50, backgroundColor: "#F4FDFB" }}
