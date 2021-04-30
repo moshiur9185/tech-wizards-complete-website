@@ -1,5 +1,5 @@
-                                                                  MD Moshiur Rahman
-                                                             Project Name : TECH WIZARDS
+                                                     MD Moshiur Rahman
+                                                Project Name : TECH WIZARDS
 (Live Link: https://tech-wizards-fafbc.web.app/)
 
 Technology : React JS, React Router, React Bootstrap, MongoDB, Node JS, Express, React Spring, HTML, CSS, Font awesome, Material UI
