@@ -4,7 +4,7 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const Dashboard = () => {
     return (
-        <div>
+        <div style={{minHeight: "100vh"}}>
             <Sidebar/>
             <Book/>
         </div>

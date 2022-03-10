@@ -16,6 +16,7 @@ const Home = () => {
       <Testimonial/>
       <Blogs/>
       <Contact/>
+      <Footer />
     </div>
   );
 };

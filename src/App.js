@@ -18,7 +18,6 @@ import Contact from "./Components/MainPage/Contact/Contact";
 import Services from "./Components/MainPage/Services/Services";
 import AddBlogs from "./Components/AdminDashboard/AddBlogs/AddBlogs";
 import HeaderNavbar from "./Components/Shared/HeaderNavbar/HeaderNavbar";
-import Footer from "./Components/Shared/Footer/Footer";
 
 
 export const UserContext = createContext();
@@ -81,7 +80,6 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        <Footer />
       </Router>
     </UserContext.Provider>
   );
