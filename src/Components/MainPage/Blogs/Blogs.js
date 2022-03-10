@@ -11,7 +11,7 @@ const Blogs = () => {
   },[]);
      return (
         <section className="container text-center mt-5">
-         <h2 className="text-brand">BLOGS :</h2>
+         <h4 className="">BLOGS</h4>
            <div className="row">
            {
                 blogs.map(blog => <BlogsDetails key={'id'} blog={blog}></BlogsDetails>)

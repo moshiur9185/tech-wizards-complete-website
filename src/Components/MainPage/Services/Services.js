@@ -12,9 +12,9 @@ const Services = () => {
 
   return (
     <section className="service-container container text-center mt-5">
-      <h2>
-        Services
-      </h2>
+      <h4>
+        SERVICES
+      </h4>
         <p className="text-secondary">Repair And Support All  Windows/Linux PC And Service  Apple/Mac Computers.</p>
         <div className="row">
             {

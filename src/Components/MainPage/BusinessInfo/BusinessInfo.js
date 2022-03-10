@@ -35,7 +35,7 @@ const infoData = [
 const BusinessInfo = () => {
   return (
         <section className="container text-center mt-5">
-         <h3 className="text-brand">Service Information</h3>
+         <h3 className="pb-3">Service Information</h3>
            <div className="row">
            {
                 infoData.map((info) => <InfoCart info={info}></InfoCart>)

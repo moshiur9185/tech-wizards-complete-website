@@ -46,7 +46,7 @@ const BlogsDetails = ({ blog }) => {
     setExpanded(!expanded);
   };
   return (
-    <div className="my-5 col-md-4">
+    <div className="my-4 col-md-4">
       <Card className={classes.root}>
         <CardHeader
           avatar={

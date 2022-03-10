@@ -17,7 +17,7 @@ const Testimonial = () => {
       <div className="container">
         <div className="row d-flex justify-content-between mt-5">
           <div className="col text-center">
-            <h5 style={{ color: "rgb(28, 199, 193)" }}>TESTIMONIAL</h5>
+            <h4 >TESTIMONIAL</h4>
           </div>
         </div>
         <div className="row">

@@ -2,7 +2,7 @@
     height:700px;
     position:relative;
     /* background-image: url(../../../images/chairBG.png); */
-    background-image: linear-gradient(rgba(218, 245, 248, 0.767), rgba(215, 253, 205, 0.836));
+    background-image: linear-gradient( rgba(25, 0, 255, 0.836), rgb(0, 217, 255));
     background-size: cover;
 }
 .header-container::before {

@@ -17,6 +17,8 @@ import ManageService from "./Components/AdminDashboard/ManageService/ManageServi
 import Contact from "./Components/MainPage/Contact/Contact";
 import Services from "./Components/MainPage/Services/Services";
 import AddBlogs from "./Components/AdminDashboard/AddBlogs/AddBlogs";
+import HeaderNavbar from "./Components/Shared/HeaderNavbar/HeaderNavbar";
+import Footer from "./Components/Shared/Footer/Footer";
 
 
 export const UserContext = createContext();
@@ -34,6 +36,7 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
+        <HeaderNavbar />
         <Switch>
           <Route path="/home">
             <Home />
@@ -57,7 +60,7 @@ function App() {
             <AddService />
           </Route>
           <Route path="/addBlog">
-            <AddBlogs/>
+            <AddBlogs />
           </Route>
           <Route path="/services">
             <Services />
@@ -69,7 +72,7 @@ function App() {
             <MakeAdmin />
           </Route>
           <Route path="/manageService">
-            <ManageService/>
+            <ManageService />
           </Route>
           <Route path="/login">
             <Login />
@@ -78,6 +81,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </UserContext.Provider>
   );
