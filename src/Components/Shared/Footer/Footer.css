@@ -1,5 +1,5 @@
 .footer-area{
-    background-image: linear-gradient(rgb(24, 26, 61), rgba(13, 14, 34, 0.986));
+    background-image: linear-gradient(rgb(4, 6, 34), rgba(2, 3, 19, 0.986));
     background-size: cover;
 }
 
@@ -10,7 +10,7 @@
 .social-media .icon{
     height: 40px;
     width: 40px;
-    color: #c71c4f;
+    color: green;
     border-radius: 50%;
     border: 1px solid #067aff;
     padding: 10px;
