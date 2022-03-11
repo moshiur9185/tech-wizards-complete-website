@@ -1,8 +1,9 @@
 .header-container {
-    height:700px;
+    width: 100%;
     position:relative;
-    /* background-image: url(../../../images/chairBG.png); */
-    background-image: linear-gradient( rgba(25, 0, 255, 0.836), rgb(0, 217, 255));
+    /* opacity: 200% ; */
+    background-image: url(https://cdn.pixabay.com/photo/2020/10/21/01/56/digital-5671888_960_720.png);
+    /* background-image: linear-gradient( rgba(0, 255, 85, 0.733), rgba(0, 217, 255, 0.705)); */
     background-size: cover;
 }
 .header-container::before {
